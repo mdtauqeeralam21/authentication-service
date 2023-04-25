@@ -8,7 +8,7 @@ stage('Checkout'){
 
 steps{
 
-git branch: "main", url: 'https://github.com/chiranjiv09/g2-authentication-service.git'
+git branch: "main", url: 'https://github.com/mdtauqeeralam21/authentication-service.git'
 
 }
 
@@ -40,7 +40,7 @@ stage('DockerBuild') {
 
 steps {
 
-sh 'docker build -t kushck09/g2-authentication-service:latest .'
+sh 'docker build -t tauqeeralam21/g2-authentication-service:latest .'
 
 }
 
@@ -50,7 +50,7 @@ stage('Login') {
 
 steps {
 
-sh 'echo dockerhub123 | docker login -u kushck09 --password-stdin'
+sh 'echo Tauqeer@786 | docker login -u tauqeeralam21 --password-stdin'
 
 }
 
@@ -60,7 +60,7 @@ stage('Push') {
 
 steps {
 
-sh 'docker push kushck09/g2-authentication-service'
+sh 'docker push tauqeeralam21/g2-authentication-service'
 
 }
 
